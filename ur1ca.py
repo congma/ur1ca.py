@@ -119,7 +119,7 @@ def scrape(document):
         matchdict = badguess.groupdict()
         return (False, matchdict["errormsg"])
     else:
-        return (False, "Unknown local error.")
+        return (False, "Unknown error.")
 
 
 def __do_main():
