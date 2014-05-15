@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-"""ur1.py -- command-line ur1.ca client.
+"""ur1ca.py -- command-line ur1.ca client.
 
-ur1.ca is the URL shortening services provided by status.net. This script
+ur1.ca is a URL shortening services provided by status.net. This script
 makes it possible to access the service from the command line. This is done
 by scraping the returned page and look for the shortened URL.
 
 USAGE:
-    ur1.py LONGURL
+    ur1ca.py LONGURL
 
 RETURN STATUS:
     If the URL is succesfully shortened by ur1.ca, it is written
