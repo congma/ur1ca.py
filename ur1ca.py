@@ -1,24 +1,13 @@
 #!/usr/bin/env python
 """ur1ca.py -- command-line ur1.ca client.
 
-ur1.ca is a URL shortening services provided by status.net. This script
-makes it possible to access the service from the command line. This is done
-by scraping the returned page and look for the shortened URL.
-
 USAGE:
-    ur1ca.py LONGURL
+    ur1ca.py FULL_URL
 
-RETURN STATUS:
-    If the URL is succesfully shortened by ur1.ca, it is written
-    to the standard output, and the program exits with status 0.
-
-    If ur1.ca fails to shorten the long URL, the error message
-    provided by ur1.ca is written to the standard error, and the
-    program exits with status 1.
-
-    If the input URL is malformed, no attempts of contacting the
-    server is made, and the program exits with status 2.
-
+EXIT CODE:
+    0:  The program exits successfully.
+    1:  ur1.ca service fails to shorten the long URL.
+    2:  Input full URL is rejected as invalid.
 """
 
 
