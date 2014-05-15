@@ -86,10 +86,14 @@ def retrievedoc(response):
     Returns the text as a string.
 
     """
-    # XXX: ensure all bytes are read
+    container = []
     res_info = response.info()
-    clength = int(res_info["content-length"])
-    return response.read(clength)
+    bytes_to_read = int(res_info["content-length"])
+    while bytes_to_read > 0:
+        text = response.read(bytes_to_read)
+        bytes_to_read -= len(text)
+        container.append(text)
+    return "".join(container)
 
 
 def scrape(document):
